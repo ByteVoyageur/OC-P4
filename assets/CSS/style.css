@@ -262,7 +262,6 @@ footer .footer-social a:hover {
   text-decoration: underline;
 }
 
-.footer-social a svg {
-  fill: white !important;
-  transform: scale(0.5) !important;
+.footer-logo img {
+  filter: invert(1);
 }/*# sourceMappingURL=style.css.map */
