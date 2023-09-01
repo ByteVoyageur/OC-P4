@@ -182,8 +182,7 @@ header .search-form .search-input:focus {
 .restaurants-list .restaurants-cards a .card img {
   width: 100%;
   height: 210px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   position: relative;
