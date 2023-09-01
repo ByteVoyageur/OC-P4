@@ -102,12 +102,12 @@ header .search-form .search-input:focus {
   margin-left: 6%;
 }
 .fonctionnement ol {
+  counter-reset: list-counter;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   padding: 0;
-  list-style-type: none;
   gap: 20px;
 }
 .fonctionnement ol li {
