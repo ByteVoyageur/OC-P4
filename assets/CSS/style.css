@@ -22,6 +22,46 @@ body .main-container main {
   width: 100%;
 }
 
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+.vortex-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ff79da;
+  clip-path: circle(100% at 50% 27%);
+  animation: vortex 4s forwards;
+  z-index: 10;
+}
+
+.content {
+  opacity: 0;
+  transition: opacity 1s;
+  animation: revealContent 1s 4s forwards;
+}
+
+@keyframes vortex {
+  0% {
+    clip-path: circle(100% at 50% 27%);
+  }
+  100% {
+    clip-path: circle(0% at 50% 27%);
+  }
+}
+@keyframes revealContent {
+  to {
+    opacity: 1;
+  }
+}
 header {
   width: 100%;
   height: 120px;
