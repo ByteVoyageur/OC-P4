@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
@@ -67,6 +68,7 @@ body {
 .name-of-restaurant h1 {
   text-align: left;
   margin-top: 30px;
+  font-family: "Shrikhand", cursive;
 }
 
 .menu-wrapper {
@@ -186,6 +188,9 @@ footer .footer-social ul li {
   gap: 20px;
   align-items: baseline;
 }
+footer .footer-social ul li .my-custom-icon {
+  width: 16px;
+}
 footer .footer-social a {
   color: white;
   text-decoration: none;
@@ -198,4 +203,52 @@ footer .footer-social a:hover {
 
 .footer-logo img {
   filter: invert(1);
+}
+
+/****************************************************************************************/
+/* Media Queries */
+@media (min-width: 1024px) {
+  .logo img {
+    width: auto;
+  }
+  .menu-wrapper {
+    width: 73.3%;
+  }
+  .name-of-restaurant {
+    gap: 2vw;
+    justify-content: center;
+  }
+  .menu-section .menu-card {
+    width: 60%;
+  }
+  .menu-section .menu-card,
+  .menu-section h2 {
+    width: 60%;
+  }
+  .btn-commander {
+    width: 20%;
+  }
+  footer {
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 50px;
+  }
+  footer img {
+    margin-top: 18px;
+    width: 140px;
+    height: 30px;
+  }
+  footer ul {
+    display: flex;
+    flex-direction: row;
+  }
+  footer ul li {
+    gap: 10px;
+  }
+  footer ul li a {
+    margin-right: 10px;
+  }
+  footer ul .fa-solid {
+    margin-left: 12px;
+  }
 }/*# sourceMappingURL=restaurant.css.map */
