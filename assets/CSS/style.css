@@ -26,7 +26,6 @@ body,
 html {
   margin: 0;
   padding: 0;
-  overflow: hidden;
   background-color: #ffffff;
   font-family: Arial, sans-serif;
 }
@@ -38,23 +37,46 @@ html {
   width: 100vw;
   height: 100vh;
   background-color: #ff79da;
-  clip-path: circle(100% at 50% 27%);
-  animation: vortex 4s forwards;
+  clip-path: ellipse(100% 100% at 50% 27%);
+  animation: vortex 4s cubic-bezier(0.5, 0, 0.8, 1) forwards;
   z-index: 10;
+  pointer-events: none; /* Added pointer-events to make sure the animation doesn't block the button */
+}
+
+.promo-text {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 3em;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
+  color: white;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 11; /* Added z-index to make sure the text is on top of the animation */
 }
 
 .content {
   opacity: 0;
   transition: opacity 1s;
   animation: revealContent 1s 4s forwards;
+  min-height: 100vh;
+  position: relative; /* Added position relative to make sure the animation is on top of the content */
 }
 
 @keyframes vortex {
   0% {
-    clip-path: circle(100% at 50% 27%);
+    clip-path: ellipse(100% 100% at 50% 27%);
+    opacity: 1;
+  }
+  99% {
+    clip-path: ellipse(29% 25px at 50% 27%);
+    opacity: 1;
   }
   100% {
-    clip-path: circle(0% at 50% 27%);
+    clip-path: ellipse(29% 25px at 50% 27%);
+    opacity: 0;
+    pointer-events: auto; /* Added pointer-events to make sure the animation doesn't block the button */
+    animation-fill-mode: forwards; /* Added animation-fill-mode to make sure the animation stays at the last frame */
   }
 }
 @keyframes revealContent {
@@ -62,6 +84,36 @@ html {
     opacity: 1;
   }
 }
+@keyframes fadeOut {
+  0% {
+    background-color: #ff79da;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+@keyframes enableScroll {
+  to {
+    overflow: auto;
+  }
+}
+.btn-exploration {
+  background: linear-gradient(to bottom right, #ff79da, #9356dc);
+  border-radius: 40px;
+  color: white;
+  font-size: 1em;
+  height: 50px;
+  width: 58%;
+  border: none;
+  margin-top: 20px;
+  animation: shine 1.5s infinite alternate 4s;
+  transition: all 0.3s ease-in-out;
+}
+.btn-exploration:hover {
+  box-shadow: 0 0 15px #fff, 0 0 30px #ff79da;
+  transform: scale(1.05);
+}
+
 header {
   width: 100%;
   height: 120px;
@@ -269,17 +321,24 @@ header .search-form .search-input:focus {
   margin-right: 10px;
   margin-top: 10px;
 }
-.restaurants-list .restaurants-cards a .card .card-content .card-txt {
+.restaurants-list .restaurants-cards a .card .card-content .card-rating .fa-heart {
+  color: black;
+  transition: color 0.3s ease;
+}
+.restaurants-list .restaurants-cards a .card .card-content .card-rating .fa-heart:hover {
+  color: #ff79da;
+}
+.restaurants-list .restaurants-cards a .card .card-txt {
   display: flex;
   flex-direction: column;
   gap: 5px;
   margin-left: 8px;
   margin-bottom: 15px;
 }
-.restaurants-list .restaurants-cards a .card .card-content .card-txt h3 {
+.restaurants-list .restaurants-cards a .card .card-txt h3 {
   margin: 0;
 }
-.restaurants-list .restaurants-cards a .card .card-content .card-txt p {
+.restaurants-list .restaurants-cards a .card .card-txt p {
   margin: 0;
 }
 
@@ -394,5 +453,19 @@ footer .footer-social a:hover {
   }
   footer ul .fa-solid {
     margin-left: 12px;
+  }
+  .vortex-animation {
+    animation: vortexDesktop 4s forwards;
+  }
+  @keyframes vortexDesktop {
+    0% {
+      clip-path: circle(100% at 50% 27%);
+    }
+    80% {
+      clip-path: circle(20% at 50% 27%); /* Changed the clip-path to a circle */
+    }
+    100% {
+      clip-path: circle(0% at 50% 27%);
+    }
   }
 }/*# sourceMappingURL=style.css.map */
