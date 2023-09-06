@@ -146,6 +146,16 @@ body {
   font-weight: bold;
 }
 
+@keyframes btnShine {
+  0%, 100% {
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff79da, 0 0 20px #ff79da, 0 0 25px #ff79da, 0 0 30px #ff79da, 0 0 35px #ff79da;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff79da;
+  }
+  50% {
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff79da, 0 0 40px #ff79da, 0 0 50px #ff79da, 0 0 60px #ff79da, 0 0 70px #ff79da;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff79da;
+  }
+}
 .btn-commander {
   background: linear-gradient(to bottom right, #ff79da, #9356dc);
   border-radius: 40px;
@@ -156,6 +166,11 @@ body {
   border: none;
   margin-top: 40px;
   margin-bottom: 40px;
+  transition: box-shadow 0.5s, text-shadow 0.5s;
+}
+
+.btn-commander:hover {
+  animation: btnShine 1s infinite alternate;
 }
 
 footer {

@@ -215,34 +215,22 @@ header .search-form .search-input:focus {
 .fonctionnement h2 {
   margin-left: 6%;
 }
-.fonctionnement ol {
-  counter-reset: list-counter;
+.fonctionnement .steps-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: 0;
-  gap: 20px;
+  gap: 30px;
 }
-.fonctionnement ol li {
-  background-color: #f6f6f6;
-  font-weight: bold;
-  font-size: 1.1em;
-  border-radius: 20px;
-  width: 85%;
-  height: 73px;
+.fonctionnement .steps-container .step {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
-  gap: 20px;
+  width: 85%;
+  position: relative;
 }
-.fonctionnement ol li i {
-  color: #d2d2d2;
-}
-.fonctionnement ol li::before {
-  content: counter(list-counter);
-  counter-increment: list-counter;
+.fonctionnement .steps-container .step span:nth-child(1) {
   background-color: #9356dc;
   border-radius: 50%;
   color: white;
@@ -252,7 +240,37 @@ header .search-form .search-input:focus {
   align-items: center;
   justify-content: center;
   position: absolute;
-  left: 3.5vw;
+  left: -15px;
+  z-index: 2;
+}
+.fonctionnement .steps-container button {
+  width: 100%;
+  background-color: #f6f6f6;
+  font-weight: bold;
+  font-size: 1em;
+  border-radius: 20px;
+  height: 73px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.16);
+  gap: 20px;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+.fonctionnement .steps-container button:hover i {
+  color: #ff79da;
+}
+.fonctionnement .steps-container button i {
+  color: #d2d2d2;
+  position: absolute;
+  left: 15%;
+}
+.fonctionnement .steps-container button span {
+  text-align: center;
 }
 
 .restaurants-list {
@@ -405,18 +423,22 @@ footer .footer-social a:hover {
   .restaurants-intro .btn-exploration {
     width: 220px;
   }
-  .fonctionnement ol {
-    flex-direction: row;
+  .fonctionnement {
+    flex-direction: column;
     justify-content: center;
   }
-  .fonctionnement ol li {
-    margin: 0 15px;
-    width: 335px;
-    height: 73px;
+  .fonctionnement h2 {
+    margin-left: 25%;
   }
-  .fonctionnement ol li::before {
-    left: -40px;
-    position: relative;
+  .fonctionnement .steps-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  .fonctionnement .steps-container .step {
+    flex-direction: row;
+    width: 335px;
   }
   .restaurants-list {
     background-color: #f6f6f6;
