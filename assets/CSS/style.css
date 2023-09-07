@@ -438,7 +438,7 @@ footer .footer-social a:hover {
   }
   .fonctionnement .steps-container .step {
     flex-direction: row;
-    width: 335px;
+    width: 23%;
   }
   .restaurants-list {
     background-color: #f6f6f6;
