@@ -23,6 +23,10 @@ body {
   width: 100%;
 }
 
+header {
+  width: 100%;
+}
+
 .photo-of-restaurant {
   width: 100%;
   height: 275px;
@@ -30,6 +34,7 @@ body {
 .photo-of-restaurant img {
   width: 100%;
   object-fit: cover;
+  height: 350px;
 }
 
 .logo {
@@ -77,8 +82,8 @@ body {
   flex-direction: column;
   align-items: center;
   background-color: #f6f6f6;
-  border-top-left-radius: 40px;
-  border-top-right-radius: 40px;
+  border-top-left-radius: 45px;
+  border-top-right-radius: 45px;
 }
 
 .menu-section {
