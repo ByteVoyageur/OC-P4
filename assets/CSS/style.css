@@ -1,12 +1,11 @@
 * {
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
   margin: 0;
 }
-
 body .main-container {
   margin: 0;
   padding: 0;
@@ -15,7 +14,6 @@ body .main-container {
   align-items: center;
   justify-content: center;
 }
-
 body .main-container main {
   display: flex;
   flex-direction: column;
@@ -40,15 +38,13 @@ html {
   height: 100vh;
   background-color: #ff79da;
   clip-path: ellipse(100% 100% at 50% 27%);
-  animation: vortex 4s cubic-bezier(0.5, 0, 0.8, 1) forwards;
-  /* Added cubic-bezier to make the animation smoother */
+  animation: vortex 4s cubic-bezier(0.5, 0, 0.8, 1) forwards; /* Added cubic-bezier to make the animation smoother */
   z-index: 10;
-  pointer-events: none;
-  /* Added pointer-events to make sure the animation doesn't block the button */
+  pointer-events: none; /* Added pointer-events to make sure the animation doesn't block the button */
 }
 
 .promo-text {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   font-size: 3em;
   text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
   color: white;
@@ -56,8 +52,7 @@ html {
   top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 11;
-  /* Added z-index to make sure the text is on top of the animation */
+  z-index: 11; /* Added z-index to make sure the text is on top of the animation */
 }
 
 .content {
@@ -65,8 +60,7 @@ html {
   transition: opacity 1s;
   animation: revealContent 1s 4s forwards;
   min-height: 100vh;
-  position: relative;
-  /* Added position relative to make sure the animation is on top of the content */
+  position: relative; /* Added position relative to make sure the animation is on top of the content */
 }
 
 @keyframes vortex {
@@ -81,19 +75,15 @@ html {
   100% {
     clip-path: circle(0% at 50% 27%);
     opacity: 0;
-    pointer-events: auto;
-    /* Added pointer-events to make sure the animation doesn't block the button */
-    animation-fill-mode: forwards;
-    /* Added animation-fill-mode to make sure the animation stays at the last frame */
+    pointer-events: auto; /* Added pointer-events to make sure the animation doesn't block the button */
+    animation-fill-mode: forwards; /* Added animation-fill-mode to make sure the animation stays at the last frame */
   }
 }
-
 @keyframes revealContent {
   to {
     opacity: 1;
   }
 }
-
 @keyframes fadeOut {
   0% {
     background-color: #ff79da;
@@ -102,13 +92,11 @@ html {
     background-color: transparent;
   }
 }
-
 @keyframes enableScroll {
   to {
     overflow: auto;
   }
 }
-
 .btn-exploration {
   background: linear-gradient(to bottom right, #ff79da, #9356dc);
   border-radius: 40px;
@@ -121,7 +109,6 @@ html {
   animation: shine 1.5s infinite alternate 4s;
   transition: all 0.3s ease-in-out;
 }
-
 .btn-exploration:hover {
   box-shadow: 0 0 15px #fff, 0 0 30px #ff79da;
   transform: scale(1.05);
@@ -136,12 +123,10 @@ header {
   justify-content: center;
   align-items: center;
 }
-
 header .logo {
   margin-top: 20px;
   margin-bottom: 10px;
 }
-
 header .search-form {
   width: 100%;
   height: 60px;
@@ -151,11 +136,9 @@ header .search-form {
   align-items: center;
   box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.2);
 }
-
 header .search-form .location-icon {
   margin-right: 10px;
 }
-
 header .search-form .search-input {
   font-size: 1em;
   font-weight: bold;
@@ -165,7 +148,6 @@ header .search-form .search-input {
   max-width: 15ch;
   border: 1px solid transparent;
 }
-
 header .search-form .search-input:focus {
   outline: none;
   border: none;
@@ -173,19 +155,18 @@ header .search-form .search-input:focus {
 
 @keyframes shine {
   0% {
-    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff79da, 0 0 20px #ff79da, 0 0 25px #ff79da, 0 0 30px #ff79da, 0 0 35px #ff79da;
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff79da, 0 0 20px #ff79da, 0 0 25px #ff79da, 0 0 30px #ff79da, 0 0 35px #ff79da;
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff79da;
   }
   50% {
-    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff79da, 0 0 40px #ff79da, 0 0 50px #ff79da, 0 0 60px #ff79da, 0 0 70px #ff79da;
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff79da, 0 0 40px #ff79da, 0 0 50px #ff79da, 0 0 60px #ff79da, 0 0 70px #ff79da;
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff79da;
   }
   100% {
-    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff79da, 0 0 20px #ff79da, 0 0 25px #ff79da, 0 0 30px #ff79da, 0 0 35px #ff79da;
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff79da, 0 0 20px #ff79da, 0 0 25px #ff79da, 0 0 30px #ff79da, 0 0 35px #ff79da;
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff79da;
   }
 }
-
 .restaurants-intro {
   background-color: #f6f6f6;
   width: 100%;
@@ -196,7 +177,6 @@ header .search-form .search-input:focus {
   align-items: center;
   color: black;
 }
-
 .restaurants-intro h1 {
   width: 70%;
   font-size: 2em;
@@ -205,13 +185,11 @@ header .search-form .search-input:focus {
   text-align: center;
   margin-top: 0;
 }
-
 .restaurants-intro p {
   width: 70%;
   font-size: 1.2em;
   text-align: center;
 }
-
 .restaurants-intro .btn-exploration {
   background: linear-gradient(to bottom right, #ff79da, #9356dc);
   border-radius: 40px;
@@ -224,7 +202,6 @@ header .search-form .search-input:focus {
   animation: shine 1.5s infinite alternate;
   transition: all 0.3s ease-in-out;
 }
-
 .restaurants-intro .btn-exploration:hover {
   box-shadow: 0 0 15px #fff, 0 0 30px #ff79da;
   transform: scale(1.05);
@@ -235,11 +212,9 @@ header .search-form .search-input:focus {
   display: flex;
   flex-direction: column;
 }
-
 .fonctionnement h2 {
   margin-left: 6%;
 }
-
 .fonctionnement .steps-container {
   display: flex;
   flex-direction: column;
@@ -247,7 +222,6 @@ header .search-form .search-input:focus {
   width: 100%;
   gap: 30px;
 }
-
 .fonctionnement .steps-container .step {
   display: flex;
   flex-direction: row;
@@ -256,7 +230,6 @@ header .search-form .search-input:focus {
   width: 85%;
   position: relative;
 }
-
 .fonctionnement .steps-container .step span:nth-child(1) {
   background-color: #9356dc;
   border-radius: 50%;
@@ -270,7 +243,6 @@ header .search-form .search-input:focus {
   left: -15px;
   z-index: 2;
 }
-
 .fonctionnement .steps-container button {
   width: 100%;
   background-color: #f6f6f6;
@@ -289,17 +261,14 @@ header .search-form .search-input:focus {
   position: relative;
   z-index: 1;
 }
-
 .fonctionnement .steps-container button:hover i {
   color: #ff79da;
 }
-
 .fonctionnement .steps-container button i {
   color: #d2d2d2;
   position: absolute;
   left: 15%;
 }
-
 .fonctionnement .steps-container button span {
   text-align: center;
 }
@@ -312,7 +281,6 @@ header .search-form .search-input:focus {
   gap: 20px;
   width: 100%;
 }
-
 .restaurants-list .restaurants-cards {
   width: 100%;
   display: flex;
@@ -322,7 +290,6 @@ header .search-form .search-input:focus {
   align-items: center;
   gap: 20px;
 }
-
 .restaurants-list .restaurants-cards a {
   color: black;
   text-decoration: none;
@@ -331,7 +298,6 @@ header .search-form .search-input:focus {
   display: flex;
   flex-direction: column;
 }
-
 .restaurants-list .restaurants-cards a .card {
   width: 100%;
   display: flex;
@@ -341,12 +307,10 @@ header .search-form .search-input:focus {
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
   transition: all 0.2s;
 }
-
 .restaurants-list .restaurants-cards a .card:active {
   background-color: rgba(0, 0, 0, 0.1);
   transform: translate(2px);
 }
-
 .restaurants-list .restaurants-cards a .card img {
   width: 100%;
   height: 210px;
@@ -355,7 +319,6 @@ header .search-form .search-input:focus {
   border-top-right-radius: 20px;
   position: relative;
 }
-
 .restaurants-list .restaurants-cards a .card span {
   position: absolute;
   width: 80px;
@@ -368,23 +331,19 @@ header .search-form .search-input:focus {
   padding: 5px;
   text-align: center;
 }
-
 .restaurants-list .restaurants-cards a .card .card-content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-
 .restaurants-list .restaurants-cards a .card .card-content .card-rating {
   margin-right: 10px;
   margin-top: 10px;
 }
-
 .restaurants-list .restaurants-cards a .card .card-content .card-rating i:hover {
   color: #ff79da;
   transition: all 0.2s ease-in-out 0s;
 }
-
 .restaurants-list .restaurants-cards a .card .card-content .card-txt {
   display: flex;
   flex-direction: column;
@@ -392,11 +351,9 @@ header .search-form .search-input:focus {
   margin-left: 8px;
   margin-bottom: 15px;
 }
-
 .restaurants-list .restaurants-cards a .card .card-content .card-txt h3 {
   margin: 0;
 }
-
 .restaurants-list .restaurants-cards a .card .card-content .card-txt p {
   margin: 0;
 }
@@ -410,11 +367,9 @@ footer {
   align-items: flex-start;
   padding: 20px;
 }
-
 footer i {
   color: white;
 }
-
 footer .footer-social {
   display: flex;
   flex-direction: column;
@@ -422,36 +377,30 @@ footer .footer-social {
   gap: 15px;
   margin-top: 5px;
 }
-
 footer .footer-social ul {
   list-style-type: none;
   padding: 0;
   gap: 5px;
 }
-
 footer .footer-social ul li {
   display: flex;
   flex-direction: row;
   gap: 20px;
   align-items: baseline;
 }
-
 footer .footer-social ul li .fa-solid,
 footer .footer-social ul li .fas {
   width: 18px;
 }
-
 footer .footer-social ul li .my-custom-icon {
   font-size: 16px;
 }
-
 footer .footer-social a {
   color: white;
   text-decoration: none;
   font-size: 1em;
   margin-top: 10px;
 }
-
 footer .footer-social a:hover {
   text-decoration: underline;
 }
@@ -533,11 +482,10 @@ footer .footer-social a:hover {
       clip-path: circle(100% at 50% 27%);
     }
     80% {
-      clip-path: circle(20% at 50% 27%);
-      /* Changed the clip-path to a circle */
+      clip-path: circle(20% at 50% 27%); /* Changed the clip-path to a circle */
     }
     100% {
       clip-path: circle(0% at 50% 27%);
     }
   }
-}
+}/*# sourceMappingURL=style.css.map */
