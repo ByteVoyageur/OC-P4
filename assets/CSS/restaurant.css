@@ -121,22 +121,27 @@ header {
   background-color: #fff;
   justify-content: space-between;
   height: 70px;
+  position: relative;
+}
+.menu-section .menu-card:active {
+  background-color: #f0f0f0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .menu-section .menu-card h3 {
   margin-top: 10px;
   margin-left: 10px;
   margin-bottom: 0;
 }
-.menu-section .menu-card .item-description {
-  margin-top: 0;
-  margin-left: 10px;
-  display: flex;
-  align-items: center;
-}
 .menu-section .menu-card .card-content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+.menu-section .menu-card .card-content .item-description {
+  margin-top: 0;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
 }
 .menu-section .menu-card .card-content .price {
   display: flex;
@@ -144,11 +149,32 @@ header {
   margin: 10px;
   font-weight: bold;
 }
-.menu-section .menu-card .card-content .price span .euro {
-  margin-left: 2px;
-  margin-right: 10px;
-  margin-bottom: 10px;
+.menu-section .menu-card .card-content .price span.euro {
   font-weight: bold;
+}
+.menu-section .menu-card:hover .card-content .price {
+  margin-right: 69px;
+}
+.menu-section .menu-card:hover .card-content .price span.euro {
+  margin-right: 5px;
+}
+.menu-section .menu-card:hover .card-content::after {
+  content: "\f058";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 1.4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute; /* Takes the element out of the normal flow and positions it relative to its nearest positioned ancestor. */
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 59px;
+  background-color: #99e2d0;
+  color: white;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 @keyframes btnShine {

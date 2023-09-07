@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -21,6 +22,109 @@ body .main-container main {
   align-items: center;
   justify-content: center;
   width: 100%;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+.vortex-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ff79da;
+  clip-path: ellipse(100% 100% at 50% 27%);
+  animation: vortex 4s cubic-bezier(0.5, 0, 0.8, 1) forwards;
+  /* Added cubic-bezier to make the animation smoother */
+  z-index: 10;
+  pointer-events: none;
+  /* Added pointer-events to make sure the animation doesn't block the button */
+}
+
+.promo-text {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3em;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
+  color: white;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 11;
+  /* Added z-index to make sure the text is on top of the animation */
+}
+
+.content {
+  opacity: 0;
+  transition: opacity 1s;
+  animation: revealContent 1s 4s forwards;
+  min-height: 100vh;
+  position: relative;
+  /* Added position relative to make sure the animation is on top of the content */
+}
+
+@keyframes vortex {
+  0% {
+    clip-path: circle(100% at 50% 27%);
+    opacity: 1;
+  }
+  80% {
+    clip-path: circle(20% at 50% 27%);
+    opacity: 1;
+  }
+  100% {
+    clip-path: circle(0% at 50% 27%);
+    opacity: 0;
+    pointer-events: auto;
+    /* Added pointer-events to make sure the animation doesn't block the button */
+    animation-fill-mode: forwards;
+    /* Added animation-fill-mode to make sure the animation stays at the last frame */
+  }
+}
+
+@keyframes revealContent {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    background-color: #ff79da;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+@keyframes enableScroll {
+  to {
+    overflow: auto;
+  }
+}
+
+.btn-exploration {
+  background: linear-gradient(to bottom right, #ff79da, #9356dc);
+  border-radius: 40px;
+  color: white;
+  font-size: 1em;
+  height: 50px;
+  width: 58%;
+  border: none;
+  margin-top: 20px;
+  animation: shine 1.5s infinite alternate 4s;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-exploration:hover {
+  box-shadow: 0 0 15px #fff, 0 0 30px #ff79da;
+  transform: scale(1.05);
 }
 
 header {
@@ -67,6 +171,21 @@ header .search-form .search-input:focus {
   border: none;
 }
 
+@keyframes shine {
+  0% {
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff79da, 0 0 20px #ff79da, 0 0 25px #ff79da, 0 0 30px #ff79da, 0 0 35px #ff79da;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff79da;
+  }
+  50% {
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff79da, 0 0 40px #ff79da, 0 0 50px #ff79da, 0 0 60px #ff79da, 0 0 70px #ff79da;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff79da;
+  }
+  100% {
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff79da, 0 0 20px #ff79da, 0 0 25px #ff79da, 0 0 30px #ff79da, 0 0 35px #ff79da;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff79da;
+  }
+}
+
 .restaurants-intro {
   background-color: #f6f6f6;
   width: 100%;
@@ -84,6 +203,7 @@ header .search-form .search-input:focus {
   font-weight: bold;
   margin-bottom: 10px;
   text-align: center;
+  margin-top: 0;
 }
 
 .restaurants-intro p {
@@ -101,6 +221,13 @@ header .search-form .search-input:focus {
   width: 58%;
   border: none;
   margin-top: 20px;
+  animation: shine 1.5s infinite alternate;
+  transition: all 0.3s ease-in-out;
+}
+
+.restaurants-intro .btn-exploration:hover {
+  box-shadow: 0 0 15px #fff, 0 0 30px #ff79da;
+  transform: scale(1.05);
 }
 
 .fonctionnement {
@@ -113,37 +240,24 @@ header .search-form .search-input:focus {
   margin-left: 6%;
 }
 
-.fonctionnement ol {
-  counter-reset: list-counter;
+.fonctionnement .steps-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: 0;
-  gap: 20px;
+  gap: 30px;
 }
 
-.fonctionnement ol li {
-  background-color: #f6f6f6;
-  font-weight: bold;
-  font-size: 1.1em;
-  border-radius: 20px;
-  width: 85%;
-  height: 73px;
+.fonctionnement .steps-container .step {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
-  gap: 20px;
+  width: 85%;
+  position: relative;
 }
 
-.fonctionnement ol li i {
-  color: #d2d2d2;
-}
-
-.fonctionnement ol li::before {
-  content: counter(list-counter);
-  counter-increment: list-counter;
+.fonctionnement .steps-container .step span:nth-child(1) {
   background-color: #9356dc;
   border-radius: 50%;
   color: white;
@@ -153,7 +267,41 @@ header .search-form .search-input:focus {
   align-items: center;
   justify-content: center;
   position: absolute;
-  left: 3.5vw;
+  left: -15px;
+  z-index: 2;
+}
+
+.fonctionnement .steps-container button {
+  width: 100%;
+  background-color: #f6f6f6;
+  font-weight: bold;
+  font-size: 1em;
+  border-radius: 20px;
+  height: 73px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.16);
+  gap: 20px;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+.fonctionnement .steps-container button:hover i {
+  color: #ff79da;
+}
+
+.fonctionnement .steps-container button i {
+  color: #d2d2d2;
+  position: absolute;
+  left: 15%;
+}
+
+.fonctionnement .steps-container button span {
+  text-align: center;
 }
 
 .restaurants-list {
@@ -232,6 +380,11 @@ header .search-form .search-input:focus {
   margin-top: 10px;
 }
 
+.restaurants-list .restaurants-cards a .card .card-content .card-rating i:hover {
+  color: #ff79da;
+  transition: all 0.2s ease-in-out 0s;
+}
+
 .restaurants-list .restaurants-cards a .card .card-content .card-txt {
   display: flex;
   flex-direction: column;
@@ -283,6 +436,15 @@ footer .footer-social ul li {
   align-items: baseline;
 }
 
+footer .footer-social ul li .fa-solid,
+footer .footer-social ul li .fas {
+  width: 18px;
+}
+
+footer .footer-social ul li .my-custom-icon {
+  font-size: 16px;
+}
+
 footer .footer-social a {
   color: white;
   text-decoration: none;
@@ -294,7 +456,88 @@ footer .footer-social a:hover {
   text-decoration: underline;
 }
 
-.footer-social a svg {
-  fill: white !important;
-  transform: scale(0.5) !important;
+.footer-logo img {
+  filter: invert(1);
+}
+
+/****************************************************************************************/
+/* Media Queries */
+@media (min-width: 1024px) {
+  .restaurants-intro {
+    height: 280px;
+  }
+  .restaurants-intro p {
+    font-size: medium;
+  }
+  .restaurants-intro .btn-exploration {
+    width: 220px;
+  }
+  .fonctionnement {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .fonctionnement h2 {
+    margin-left: 12%;
+  }
+  .fonctionnement .steps-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  .fonctionnement .steps-container .step {
+    flex-direction: row;
+    width: 23%;
+  }
+  .restaurants-list {
+    background-color: #f6f6f6;
+  }
+  .restaurants-list .restaurants-cards {
+    width: 75%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-bottom: 35px;
+  }
+  .restaurants-list .restaurants-cards a {
+    width: 40%;
+  }
+  footer {
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 50px;
+  }
+  footer img {
+    margin-top: 18px;
+    width: 140px;
+    height: 30px;
+  }
+  footer ul {
+    display: flex;
+    flex-direction: row;
+  }
+  footer ul li {
+    gap: 10px;
+  }
+  footer ul li a {
+    margin-right: 10px;
+  }
+  footer ul .fa-solid {
+    margin-left: 12px;
+  }
+  .vortex-animation {
+    animation: vortexDesktop 4s forwards;
+  }
+  @keyframes vortexDesktop {
+    0% {
+      clip-path: circle(100% at 50% 27%);
+    }
+    80% {
+      clip-path: circle(20% at 50% 27%);
+      /* Changed the clip-path to a circle */
+    }
+    100% {
+      clip-path: circle(0% at 50% 27%);
+    }
+  }
 }

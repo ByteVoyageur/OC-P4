@@ -38,7 +38,7 @@ html {
   height: 100vh;
   background-color: #ff79da;
   clip-path: ellipse(100% 100% at 50% 27%);
-  animation: vortex 4s cubic-bezier(0.5, 0, 0.8, 1) forwards;
+  animation: vortex 4s cubic-bezier(0.5, 0, 0.8, 1) forwards; /* Added cubic-bezier to make the animation smoother */
   z-index: 10;
   pointer-events: none; /* Added pointer-events to make sure the animation doesn't block the button */
 }
@@ -65,15 +65,15 @@ html {
 
 @keyframes vortex {
   0% {
-    clip-path: ellipse(100% 100% at 50% 27%);
+    clip-path: circle(100% at 50% 27%);
     opacity: 1;
   }
-  99% {
-    clip-path: ellipse(29% 25px at 50% 27%);
+  80% {
+    clip-path: circle(20% at 50% 27%);
     opacity: 1;
   }
   100% {
-    clip-path: ellipse(29% 25px at 50% 27%);
+    clip-path: circle(0% at 50% 27%);
     opacity: 0;
     pointer-events: auto; /* Added pointer-events to make sure the animation doesn't block the button */
     animation-fill-mode: forwards; /* Added animation-fill-mode to make sure the animation stays at the last frame */
