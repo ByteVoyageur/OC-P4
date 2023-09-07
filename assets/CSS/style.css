@@ -285,6 +285,7 @@ header .search-form .search-input:focus {
   width: 100%;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 20px;
@@ -339,24 +340,21 @@ header .search-form .search-input:focus {
   margin-right: 10px;
   margin-top: 10px;
 }
-.restaurants-list .restaurants-cards a .card .card-content .card-rating .fa-heart {
-  color: black;
-  transition: color 0.3s ease;
-}
-.restaurants-list .restaurants-cards a .card .card-content .card-rating .fa-heart:hover {
+.restaurants-list .restaurants-cards a .card .card-content .card-rating i:hover {
   color: #ff79da;
+  transition: all 0.2s ease-in-out 0s;
 }
-.restaurants-list .restaurants-cards a .card .card-txt {
+.restaurants-list .restaurants-cards a .card .card-content .card-txt {
   display: flex;
   flex-direction: column;
   gap: 5px;
   margin-left: 8px;
   margin-bottom: 15px;
 }
-.restaurants-list .restaurants-cards a .card .card-txt h3 {
+.restaurants-list .restaurants-cards a .card .card-content .card-txt h3 {
   margin: 0;
 }
-.restaurants-list .restaurants-cards a .card .card-txt p {
+.restaurants-list .restaurants-cards a .card .card-content .card-txt p {
   margin: 0;
 }
 
@@ -428,7 +426,7 @@ footer .footer-social a:hover {
     justify-content: center;
   }
   .fonctionnement h2 {
-    margin-left: 25%;
+    margin-left: 12%;
   }
   .fonctionnement .steps-container {
     display: flex;

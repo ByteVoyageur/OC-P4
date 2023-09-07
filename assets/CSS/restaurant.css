@@ -156,9 +156,17 @@ header {
     box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff79da, 0 0 20px #ff79da, 0 0 25px #ff79da, 0 0 30px #ff79da, 0 0 35px #ff79da;
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff79da;
   }
+  25% {
+    box-shadow: 0 0 7px #fff, 0 0 14px #fff, 0 0 21px #ff79da, 0 0 28px #ff79da, 0 0 35px #ff79da, 0 0 42px #ff79da, 0 0 49px #ff79da;
+    text-shadow: 0 0 7px #fff, 0 0 14px #fff, 0 0 21px #ff79da;
+  }
   50% {
     box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff79da, 0 0 40px #ff79da, 0 0 50px #ff79da, 0 0 60px #ff79da, 0 0 70px #ff79da;
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff79da;
+  }
+  75% {
+    box-shadow: 0 0 7px #fff, 0 0 14px #fff, 0 0 21px #ff79da, 0 0 28px #ff79da, 0 0 35px #ff79da, 0 0 42px #ff79da, 0 0 49px #ff79da;
+    text-shadow: 0 0 7px #fff, 0 0 14px #fff, 0 0 21px #ff79da;
   }
 }
 .btn-commander {
