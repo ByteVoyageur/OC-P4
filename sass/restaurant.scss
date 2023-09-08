@@ -113,111 +113,126 @@ header {
       width: 4ch;
     }
   }
+}
+.menu-card {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  background-color: #fff;
+  justify-content: space-between;
+  height: 70px;
+  position: relative;
 
-  .menu-card {
-    width: 90%;
+  &:active {
+    background-color: #f0f0f0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  h3 {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 0;
+  }
+
+  .card-content {
     display: flex;
-    flex-direction: column;
-    border: 1px solid #ccc;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
-    background-color: #fff;
+    flex-direction: row;
     justify-content: space-between;
-    height: 70px;
-    position: relative;
-    &:active {
-      background-color: #f0f0f0;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
 
-    h3 {
-      margin-top: 10px;
+    .item-description {
+      margin-top: 0;
       margin-left: 10px;
-      margin-bottom: 0;
+      display: flex;
+      align-items: center;
     }
 
-    .card-content {
+    .price {
       display: flex;
-      flex-direction: row;
-      justify-content: space-between;
+      align-items: center;
+      margin: 10px;
+      font-weight: bold;
+      transition: margin-right 0.5s ease; // Add transition to the margin-right property
 
-      .item-description {
-        margin-top: 0;
-        margin-left: 10px;
-        display: flex;
-        align-items: center;
-      }
-
-      .price {
-        display: flex;
-        align-items: center;
-        margin: 10px;
+      span.euro {
         font-weight: bold;
+      }
+    }
+
+    &::after {
+      content: '\f058';
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      font-size: 1.4em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      width: 0;
+      background-color: #99e2d0;
+      color: white;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+      transition: width 0.7s ease;
+      overflow: hidden;
+    }
+  }
+
+  &:hover {
+    .card-content {
+      .price {
+        margin-right: 60px; // Adjust the margin-right on hover to move the price
 
         span.euro {
-          font-weight: bold;
+          margin-right: 10px;
         }
       }
-    }
 
-    &:hover {
-      .card-content {
-        .price {
-          margin-right: 69px;
-
-          span.euro {
-            margin-right: 5px;
-          }
-        }
-
-        &::after {
-          content: '\f058';
-          font-family: 'Font Awesome 5 Free';
-          font-weight: 900;
-          font-size: 1.4em;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          position: absolute; /* Takes the element out of the normal flow and positions it relative to its nearest positioned ancestor. */
-          top: 0;
-          bottom: 0;
-          right: 0;
-          width: 59px;
-          background-color: #99e2d0;
-          color: white;
-          border-top-right-radius: 20px;
-          border-bottom-right-radius: 20px;
-        }
+      &::after {
+        width: 59px;
       }
     }
   }
 }
-@keyframes btnShine {
-  0%,
-  100% {
-    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff79da, 0 0 20px #ff79da,
-      0 0 25px #ff79da, 0 0 30px #ff79da, 0 0 35px #ff79da;
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff79da;
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
   }
-  25% {
-    box-shadow: 0 0 7px #fff, 0 0 14px #fff, 0 0 21px #ff79da, 0 0 28px #ff79da,
-      0 0 35px #ff79da, 0 0 42px #ff79da, 0 0 49px #ff79da;
-    text-shadow: 0 0 7px #fff, 0 0 14px #fff, 0 0 21px #ff79da;
-  }
-  50% {
-    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff79da, 0 0 40px #ff79da,
-      0 0 50px #ff79da, 0 0 60px #ff79da, 0 0 70px #ff79da;
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff79da;
-  }
-  75% {
-    box-shadow: 0 0 7px #fff, 0 0 14px #fff, 0 0 21px #ff79da, 0 0 28px #ff79da,
-      0 0 35px #ff79da, 0 0 42px #ff79da, 0 0 49px #ff79da;
-    text-shadow: 0 0 7px #fff, 0 0 14px #fff, 0 0 21px #ff79da;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
+
+.menu-card {
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+}
+
+.menu-card:nth-of-type(2) {
+  animation-delay: 0.2s;
+}
+
+.menu-card:nth-of-type(3) {
+  animation-delay: 0.4s;
+}
+
+.menu-card:nth-of-type(4) {
+  animation-delay: 0.6s;
+}
+
+/* Add similar rules for other menu cards if there are more than 4 */
 
 .btn-commander {
-  background: linear-gradient(to bottom right, #ff79da, #9356dc);
+  background: linear-gradient(175deg, #9356dc 0%, #ff79da 100%);
   border-radius: 40px;
   color: white;
   font-size: 1em;
@@ -226,7 +241,12 @@ header {
   border: none;
   margin-top: 40px;
   margin-bottom: 40px;
-  transition: box-shadow 0.5s, text-shadow 0.5s;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
+    transform: scale(1.05);
+  }
 }
 
 .btn-commander:hover {

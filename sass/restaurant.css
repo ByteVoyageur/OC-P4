@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -15,6 +15,7 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .main-container main {
   display: flex;
   flex-direction: column;
@@ -31,6 +32,7 @@ header {
   width: 100%;
   height: 275px;
 }
+
 .photo-of-restaurant img {
   width: 100%;
   object-fit: cover;
@@ -45,6 +47,7 @@ header {
   align-items: center;
   width: 100%;
 }
+
 .logo a {
   display: flex;
   align-items: center;
@@ -52,9 +55,11 @@ header {
   left: 10px;
   text-decoration: none;
 }
+
 .logo a i {
   margin-left: 15px;
 }
+
 .logo img {
   height: auto;
   width: 50%;
@@ -70,10 +75,11 @@ header {
   gap: 15vw;
   margin-left: 10%;
 }
+
 .name-of-restaurant h1 {
   text-align: left;
   margin-top: 30px;
-  font-family: "Shrikhand", cursive;
+  font-family: 'Shrikhand', cursive;
 }
 
 .menu-wrapper {
@@ -95,6 +101,7 @@ header {
   gap: 15px;
   margin-bottom: 20px;
 }
+
 .menu-section h2 {
   width: 90%;
   text-align: left;
@@ -102,8 +109,9 @@ header {
   font-weight: lighter;
   margin: 10px;
 }
+
 .menu-section h2::after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: -4px;
   left: 0;
@@ -124,26 +132,31 @@ header {
   height: 70px;
   position: relative;
 }
+
 .menu-card:active {
   background-color: #f0f0f0;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 .menu-card h3 {
   margin-top: 10px;
   margin-left: 10px;
   margin-bottom: 0;
 }
+
 .menu-card .card-content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
+
 .menu-card .card-content .item-description {
   margin-top: 0;
   margin-left: 10px;
   display: flex;
   align-items: center;
 }
+
 .menu-card .card-content .price {
   display: flex;
   align-items: center;
@@ -151,12 +164,14 @@ header {
   font-weight: bold;
   transition: margin-right 0.5s ease;
 }
+
 .menu-card .card-content .price span.euro {
   font-weight: bold;
 }
+
 .menu-card .card-content::after {
-  content: "\f058";
-  font-family: "Font Awesome 5 Free";
+  content: '\f058';
+  font-family: 'Font Awesome 5 Free';
   font-weight: 900;
   font-size: 1.4em;
   display: flex;
@@ -174,12 +189,15 @@ header {
   transition: width 0.7s ease;
   overflow: hidden;
 }
+
 .menu-card:hover .card-content .price {
   margin-right: 60px;
 }
+
 .menu-card:hover .card-content .price span.euro {
   margin-right: 10px;
 }
+
 .menu-card:hover .card-content::after {
   width: 59px;
 }
@@ -194,6 +212,7 @@ header {
     transform: translateY(0);
   }
 }
+
 .menu-card {
   animation-name: fadeIn;
   animation-duration: 1s;
@@ -226,6 +245,7 @@ header {
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   transition: all 0.3s ease-in-out;
 }
+
 .btn-commander:hover {
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
   transform: scale(1.05);
@@ -244,9 +264,11 @@ footer {
   align-items: flex-start;
   padding: 20px;
 }
+
 footer i {
   color: white;
 }
+
 footer .footer-social {
   display: flex;
   flex-direction: column;
@@ -254,26 +276,31 @@ footer .footer-social {
   gap: 15px;
   margin-top: 5px;
 }
+
 footer .footer-social ul {
   list-style-type: none;
   padding: 0;
   gap: 5px;
 }
+
 footer .footer-social ul li {
   display: flex;
   flex-direction: row;
   gap: 20px;
   align-items: baseline;
 }
+
 footer .footer-social ul li .my-custom-icon {
   width: 16px;
 }
+
 footer .footer-social a {
   color: white;
   text-decoration: none;
   font-size: 1em;
   margin-top: 10px;
 }
+
 footer .footer-social a:hover {
   text-decoration: underline;
 }
@@ -328,4 +355,4 @@ footer .footer-social a:hover {
   footer ul .fa-solid {
     margin-left: 12px;
   }
-}/*# sourceMappingURL=restaurant.css.map */
+}
