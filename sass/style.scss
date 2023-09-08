@@ -53,6 +53,9 @@ html {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 11; /* Added z-index to make sure the text is on top of the animation */
+  .highlight {
+    font-size: 2em;
+  }
 }
 
 .content {
