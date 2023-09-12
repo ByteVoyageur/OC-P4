@@ -123,6 +123,10 @@ header {
   justify-content: space-between;
   height: 70px;
   position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
 }
 .menu-card:active {
   background-color: #f0f0f0;
@@ -147,9 +151,12 @@ header {
 .menu-card .card-content .price {
   display: flex;
   align-items: center;
-  margin: 10px;
   font-weight: bold;
-  transition: margin-right 0.5s ease;
+  transition: margin-right 0.7s ease;
+}
+.menu-card .card-content .price p {
+  display: flex;
+  margin-right: 10px;
 }
 .menu-card .card-content .price span.euro {
   font-weight: bold;
@@ -175,7 +182,7 @@ header {
   overflow: hidden;
 }
 .menu-card:hover .card-content .price {
-  margin-right: 60px;
+  margin-right: 59px;
 }
 .menu-card:hover .card-content .price span.euro {
   margin-right: 10px;

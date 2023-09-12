@@ -125,6 +125,10 @@ header {
   justify-content: space-between;
   height: 70px;
   position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
 
   &:active {
     background-color: #f0f0f0;
@@ -152,9 +156,12 @@ header {
     .price {
       display: flex;
       align-items: center;
-      margin: 10px;
       font-weight: bold;
-      transition: margin-right 0.5s ease; // Add transition to the margin-right property
+      transition: margin-right 0.7s ease;
+      p {
+        display: flex;
+        margin-right: 10px;
+      }
 
       span.euro {
         font-weight: bold;
@@ -186,7 +193,7 @@ header {
   &:hover {
     .card-content {
       .price {
-        margin-right: 60px; // Adjust the margin-right on hover to move the price
+        margin-right: 59px; // Adjust the margin-right on hover to move the price
 
         span.euro {
           margin-right: 10px;
