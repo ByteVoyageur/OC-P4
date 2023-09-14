@@ -1,10 +1,13 @@
 * {
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
 }
 
+html,
 body {
   margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  font-family: 'Roboto', sans-serif;
 }
 
 body .main-container {
@@ -14,6 +17,8 @@ body .main-container {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  opacity: 0;
+  animation: fadeIn 2s 5s ease both;
 }
 
 body .main-container main {
@@ -24,22 +29,14 @@ body .main-container main {
   width: 100%;
 }
 
-body,
-html {
-  margin: 0;
-  padding: 0;
-  background-color: #ffffff;
-  font-family: Arial, sans-serif;
-}
-
 .promo-bouncer-animation {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-color: #ff79da;
-  animation: fadeOut 5s cubic-bezier(0.5, 0, 0.8, 1) forwards;
+  animation: fadeOut 5s cubic-bezier(0.5, 0, 0.5, 0.2) forwards;
   z-index: 10;
   pointer-events: none;
 }
@@ -63,9 +60,16 @@ html {
 .content {
   opacity: 0;
   transition: opacity 1s;
-  animation: revealContent 1s 4s forwards;
-  min-height: 100vh;
   position: relative;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeOut {
@@ -106,8 +110,7 @@ html {
 .promo-text .highlight {
   font-size: 2em;
   display: inline-block;
-  animation: highlightPulse 1s infinite;
-  /* Ajout d'une animation infinie */
+  animation: highlightPulse 2s;
 }
 
 .bouncer {
@@ -250,16 +253,12 @@ header .search-form .search-input:focus {
   flex-direction: column;
 }
 
-.fonctionnement h2 {
-  margin-left: 6%;
-}
-
 .fonctionnement .steps-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  gap: 20px;
+  gap: 25px;
   margin-bottom: 50px;
 }
 
@@ -282,7 +281,7 @@ header .search-form .search-input:focus {
   align-items: center;
   justify-content: center;
   position: absolute;
-  left: -15px;
+  left: -20px;
   z-index: 2;
 }
 
@@ -311,28 +310,24 @@ header .search-form .search-input:focus {
 
 .fonctionnement .steps-container button i {
   color: #d2d2d2;
-  position: absolute;
-  left: 15%;
 }
 
 .fonctionnement .steps-container button span {
   text-align: center;
 }
 
+h2 {
+  margin-left: 6%;
+}
+
 .restaurants-list {
   background-color: #f6f6f6;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   gap: 20px;
   width: 100%;
   margin-bottom: 50px;
-}
-
-.restaurants-list h2 {
-  margin-left: 6%;
-  width: 94%;
+  padding: 0 7%;
 }
 
 .restaurants-cards {
@@ -418,25 +413,35 @@ header .search-form .search-input:focus {
   margin: 0;
 }
 
-.card-rating .fas {
-  display: none;
+.card-rating .fa-heart {
+  -webkit-text-stroke: 2px black;
   color: transparent;
-  background-image: linear-gradient(#9356dc, #ff79da 80%);
-  -webkit-background-clip: text;
-  transition: all 0.4s ease-in-out 0s;
 }
 
-.card-rating:hover .fas {
-  display: inline;
-  transform: scale(1.2);
+.card-rating .fa-heart:hover {
+  animation: display-coeur 2s ease forwards;
+  background-clip: text;
 }
 
-.card-rating .far {
-  color: black;
-}
-
-.card-rating:hover .far {
-  display: none;
+@keyframes display-coeur {
+  0% {
+    transform: scale(0.7);
+    color: transparent;
+    -webkit-text-stroke: 0 black;
+    -webkit-background-clip: text;
+  }
+  50% {
+    transform: scale(1.5);
+    -webkit-text-stroke: 0 black;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(to bottom right, #b364d6, #ff79da);
+  }
+  100% {
+    transform: scale(1);
+    -webkit-text-stroke: 0 black;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(to bottom right, #b364d6, #ff79da);
+  }
 }
 
 footer {
@@ -530,11 +535,7 @@ footer .footer-social a:hover {
   .restaurants-list {
     background-color: #f6f6f6;
   }
-  .restaurants-list h2 {
-    margin-left: 18%;
-  }
   .restaurants-list .restaurants-cards {
-    width: 75%;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 50px;
