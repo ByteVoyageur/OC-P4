@@ -7,7 +7,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #ffffff;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 body .main-container {
@@ -20,6 +20,7 @@ body .main-container {
   opacity: 0;
   animation: fadeIn 2s 5s ease both;
 }
+
 body .main-container main {
   display: flex;
   flex-direction: column;
@@ -37,10 +38,12 @@ header {
   justify-content: center;
   align-items: center;
 }
+
 header .logo {
   margin-top: 20px;
   margin-bottom: 10px;
 }
+
 header .search-form {
   width: 100%;
   height: 60px;
@@ -50,9 +53,11 @@ header .search-form {
   align-items: center;
   box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.2);
 }
+
 header .search-form .location-icon {
   margin-right: 10px;
 }
+
 header .search-form .search-input {
   font-size: 1em;
   font-weight: bold;
@@ -62,6 +67,7 @@ header .search-form .search-input {
   max-width: 15ch;
   border: 1px solid transparent;
 }
+
 header .search-form .search-input:focus {
   outline: none;
   border: none;
@@ -76,9 +82,11 @@ footer {
   align-items: flex-start;
   padding: 20px;
 }
+
 footer i {
   color: white;
 }
+
 footer .footer-social {
   display: flex;
   flex-direction: column;
@@ -86,30 +94,36 @@ footer .footer-social {
   gap: 15px;
   margin-top: 5px;
 }
+
 footer .footer-social ul {
   list-style-type: none;
   padding: 0;
   gap: 5px;
 }
+
 footer .footer-social ul li {
   display: flex;
   flex-direction: row;
   gap: 20px;
   align-items: baseline;
 }
+
 footer .footer-social ul li .fa-solid,
 footer .footer-social ul li .fas {
   width: 18px;
 }
+
 footer .footer-social ul li .my-custom-icon {
   font-size: 16px;
 }
+
 footer .footer-social a {
   color: white;
   text-decoration: none;
   font-size: 1em;
   margin-top: 10px;
 }
+
 footer .footer-social a:hover {
   text-decoration: underline;
 }
@@ -143,6 +157,7 @@ footer .footer-social a:hover {
     margin-left: 12px;
   }
 }
+
 .promo-bouncer-animation {
   position: fixed;
   top: 0;
@@ -156,7 +171,7 @@ footer .footer-social a:hover {
 }
 
 .promo-text {
-  font-family: "Bebas Neue", sans-serif;
+  font-family: 'Bebas Neue', sans-serif;
   font-size: 3em;
   text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
   color: white;
@@ -185,6 +200,7 @@ footer .footer-social a:hover {
     opacity: 1;
   }
 }
+
 @keyframes fadeOut {
   0% {
     opacity: 1;
@@ -195,8 +211,13 @@ footer .footer-social a:hover {
     width: 100%;
   }
 }
+
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
     transform: translateY(0);
   }
   40% {
@@ -206,14 +227,17 @@ footer .footer-social a:hover {
     transform: translateY(-75%);
   }
 }
+
 @keyframes highlightPulse {
-  0%, 100% {
+  0%,
+  100% {
     font-size: 2em;
   }
   50% {
     font-size: 2.5em;
   }
 }
+
 .promo-text .highlight {
   font-size: 2em;
   display: inline-block;
@@ -277,6 +301,7 @@ footer .footer-social a:hover {
     background-image: linear-gradient(to bottom right, #9356dc, #ff79da);
   }
 }
+
 .btn-exploration {
   background: linear-gradient(175deg, #9356dc 0%, #ff79da 100%);
   border-radius: 40px;
@@ -289,6 +314,7 @@ footer .footer-social a:hover {
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   transition: all 0.3s ease-in-out;
 }
+
 .btn-exploration:hover {
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
   transform: scale(1.05);
@@ -304,6 +330,7 @@ footer .footer-social a:hover {
   align-items: center;
   color: black;
 }
+
 .restaurants-intro h1 {
   width: 70%;
   font-size: 1.75em;
@@ -312,6 +339,7 @@ footer .footer-social a:hover {
   text-align: center;
   margin-top: 0;
 }
+
 .restaurants-intro p {
   width: 70%;
   font-size: 1.2em;
@@ -327,7 +355,7 @@ footer .footer-social a:hover {
   width: 58%;
   border: none;
   margin-top: 20px;
-  transition: background 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .btn-exploration:hover {
@@ -342,6 +370,7 @@ footer .footer-social a:hover {
   display: flex;
   flex-direction: column;
 }
+
 .fonctionnement .steps-container {
   display: flex;
   flex-direction: column;
@@ -350,6 +379,7 @@ footer .footer-social a:hover {
   gap: 25px;
   margin-bottom: 50px;
 }
+
 .fonctionnement .steps-container .step {
   display: flex;
   flex-direction: row;
@@ -358,6 +388,7 @@ footer .footer-social a:hover {
   width: 85%;
   position: relative;
 }
+
 .fonctionnement .steps-container .step span:nth-child(1) {
   background-color: #9356dc;
   border-radius: 50%;
@@ -371,6 +402,7 @@ footer .footer-social a:hover {
   left: -20px;
   z-index: 2;
 }
+
 .fonctionnement .steps-container button {
   width: 100%;
   background-color: #f6f6f6;
@@ -389,12 +421,15 @@ footer .footer-social a:hover {
   position: relative;
   z-index: 1;
 }
+
 .fonctionnement .steps-container button:hover i {
   color: #9356dc;
 }
+
 .fonctionnement .steps-container button i {
   color: #d2d2d2;
 }
+
 .fonctionnement .steps-container button span {
   text-align: center;
 }
@@ -422,6 +457,7 @@ h2 {
   align-items: center;
   gap: 20px;
 }
+
 .restaurants-cards a {
   color: black;
   text-decoration: none;
@@ -430,6 +466,7 @@ h2 {
   display: flex;
   flex-direction: column;
 }
+
 .restaurants-cards a .card {
   width: 100%;
   display: flex;
@@ -439,10 +476,12 @@ h2 {
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
   transition: all 0.2s;
 }
+
 .restaurants-cards a .card:active {
   background-color: rgba(0, 0, 0, 0.1);
   transform: translate(2px);
 }
+
 .restaurants-cards a .card img {
   width: 100%;
   height: 210px;
@@ -451,6 +490,7 @@ h2 {
   border-top-right-radius: 20px;
   position: relative;
 }
+
 .restaurants-cards a .card span {
   position: absolute;
   width: 80px;
@@ -463,15 +503,18 @@ h2 {
   padding: 5px;
   text-align: center;
 }
+
 .restaurants-cards a .card .card-content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
+
 .restaurants-cards a .card .card-content .card-rating {
   margin-right: 10px;
   margin-top: 10px;
 }
+
 .restaurants-cards a .card .card-content .card-txt {
   display: flex;
   flex-direction: column;
@@ -479,9 +522,11 @@ h2 {
   margin-left: 8px;
   margin-bottom: 15px;
 }
+
 .restaurants-cards a .card .card-content .card-txt h3 {
   margin: 0;
 }
+
 .restaurants-cards a .card .card-content .card-txt p {
   margin: 0;
 }
@@ -516,6 +561,7 @@ h2 {
     background-image: linear-gradient(to bottom right, #9356dc, #ff79da);
   }
 }
+
 /****************************************************************************************/
 /* Media Queries */
 @media (min-width: 1024px) {
@@ -557,4 +603,4 @@ h2 {
   .restaurants-list .restaurants-cards a {
     width: 40%;
   }
-}/*# sourceMappingURL=style.css.map */
+}

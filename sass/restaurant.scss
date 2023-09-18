@@ -1,3 +1,6 @@
+@import 'color';
+@import 'heart-hover-effect';
+
 * {
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
@@ -129,6 +132,7 @@ header {
   text-overflow: ellipsis;
   white-space: nowrap;
   max-width: 100%;
+  border: none;
 
   &:active {
     background-color: #f0f0f0;
@@ -149,6 +153,12 @@ header {
     .item-description {
       margin-top: 0;
       margin-left: 10px;
+      display: flex;
+      align-items: center;
+    }
+
+    .price-content {
+      position: relative;
       display: flex;
       align-items: center;
     }
@@ -193,7 +203,7 @@ header {
   &:hover {
     .card-content {
       .price {
-        margin-right: 59px; // Adjust the margin-right on hover to move the price
+        margin-right: 50px; // Adjust the margin-right on hover to move the price
 
         span.euro {
           margin-right: 10px;
@@ -201,7 +211,7 @@ header {
       }
 
       &::after {
-        width: 59px;
+        width: 50px;
       }
     }
   }
