@@ -1,6 +1,7 @@
 .fa-heart {
   -webkit-text-stroke: 2px black;
   color: transparent;
+  padding: 10px;
 }
 
 .fa-heart:hover {
