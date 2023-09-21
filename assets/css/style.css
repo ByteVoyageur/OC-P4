@@ -247,12 +247,12 @@ footer .footer-social a:hover {
   animation-delay: -0.8s;
 }
 
-.card-rating .fa-heart {
+.fa-heart {
   -webkit-text-stroke: 2px black;
   color: transparent;
 }
 
-.card-rating .fa-heart:hover {
+.fa-heart:hover {
   animation: display-coeur 2s ease forwards;
   background-clip: text;
 }
