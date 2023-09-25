@@ -254,8 +254,8 @@ footer .footer-social a:hover {
 }
 
 .fa-heart:hover {
-  animation: display-coeur 2s ease forwards;
   background-clip: text;
+  animation: display-coeur 2s ease forwards;
 }
 
 @keyframes display-coeur {
