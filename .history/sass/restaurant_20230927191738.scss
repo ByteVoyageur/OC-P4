@@ -253,6 +253,10 @@ h2 {
   }
 }
 
+.btn-commander:hover {
+  animation: btnShine 1s infinite alternate;
+}
+
 footer {
   width: 100%;
   background-color: #353535;
