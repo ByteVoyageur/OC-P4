@@ -135,6 +135,7 @@ footer .footer-social a:hover {
     gap: 10px;
   }
   footer ul li a {
+    width: 100%;
     margin-right: 10px;
   }
   footer ul .fa-solid {
