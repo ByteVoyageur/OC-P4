@@ -40,24 +40,23 @@
   }
 }
 
+.restaurants-intro,
 .restaurants-list {
-  display: flex;
-  background-color: $color-background;
+  @include flex-center;
+  background-color: #f6f6f6;
   width: 100%;
   flex-direction: column;
   gap: 20px;
   margin-bottom: 50px;
-  padding: 0 5%;
+  padding: 0 7%;
+  h2 {
+    margin-left: 0;
+    display: flex;
+  }
 }
 
 .restaurants-intro {
-  height: 280px;
-  background-color: $color-background;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  height: 350px;
   color: black;
 
   h1 {
@@ -80,9 +79,6 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  h2 {
-    margin-left: 6%;
-  }
 
   .steps-container {
     display: flex;
@@ -149,13 +145,13 @@
   }
 }
 
+h2 {
+  margin-left: 6%;
+}
+
 .restaurants-cards {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
+  @include flex-center;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
   gap: 20px;
 }
 
@@ -256,7 +252,6 @@ a {
   }
 
   .restaurants-list {
-    padding: 0 12%;
     .restaurants-cards {
       flex-direction: row;
       gap: 50px;

@@ -51,7 +51,6 @@
 }
 
 .restaurants-intro {
-  height: 280px;
   background-color: $color-background;
   width: 100%;
   display: flex;
@@ -256,7 +255,6 @@ a {
   }
 
   .restaurants-list {
-    padding: 0 12%;
     .restaurants-cards {
       flex-direction: row;
       gap: 50px;
